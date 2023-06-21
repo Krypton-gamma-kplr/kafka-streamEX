@@ -18,11 +18,11 @@ for message in consumer:
     # Extraire les valeurs requises
     #HINT : Aller sur l'url "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo" et examiner les champs des données qu'on veut extraire
     timestamp = price_data['timestamp']
-    open_price = #fill_here
-    high_price = #fill_here
-    low_price = #fill_here
-    close_price = #fill_here
-    volume = #fill_here
+    open_price = price_data['open_price']
+    high_price = price_data['high_price']
+    low_price = price_data['low_price']
+    close_price = price_data['close_price']
+    volume = price_data['volume']
     
     print('Timestamp: ' + timestamp)
     print('Open Price: ' + open_price)

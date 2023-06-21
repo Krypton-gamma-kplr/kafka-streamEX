@@ -31,14 +31,19 @@ while True:
                 # Extraire les valeurs requises
                 #HINT : Aller sur l'url "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo" et examiner les champs des données qu'on veut extraire
                 open_price = values['1. open']
-                high_price = #fill_here
-                low_price = #fill_here
-                close_price = #fill_here
-                volume = #fill_here
+                high_price = values['2. high']
+                low_price = values["3. low"]
+                close_price = values["4. close"]
+                volume = values["5. volume"]
+                
                 
                 # Créer un dictionnaire avec les valeurs extraites
-                price_data = {
-                #fill_here
+                price_data = {'timestamp' : timestamp,
+                     'open_price': open_price,
+            'high_price': high_price,
+            'low_price': low_price,
+            'close_price': close_price,
+            'volume': volume
                 }
                 
                 # Convertir le dictionnaire en JSON et l'envoyer à Kafka
